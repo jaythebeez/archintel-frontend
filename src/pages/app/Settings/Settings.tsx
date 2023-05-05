@@ -45,7 +45,7 @@ const Settings = ({refresh}: Props) => {
                 <button className='material-button-green' onClick={()=>setCompanyModal(true)}>ADD COMPANY</button>
                 <h3>Companies Table</h3>
                 <div className="table-wrapper">
-                  <table>
+                  <table className='table'>
                     <thead>
                       <tr>
                         <th>Name</th>

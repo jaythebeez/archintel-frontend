@@ -19,7 +19,7 @@ const Media = ({refresh}: Props) => {
             </div>
 
             <div className="content-table">
-                <table>
+                <table className='table'>
                     <thead>
                         <tr>
                             <th>Title</th>

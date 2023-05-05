@@ -33,6 +33,17 @@
             justify-content: space-around;
             width: 100%;
             background: $theme-color-green;
+            transition:.3s;
+            cursor: pointer;
+            .profile-arrow{
+                transition: .3s;
+            }
+            &:hover{
+                .profile-arrow{
+                    cursor: pointer;
+                    transform: translateY(10px);
+                }
+            }
             .profile-icon{
                 width: 40px;
                 height: 40px;
@@ -56,6 +67,7 @@
                     font-size: 12px;
                 }
             }
+            
         }
 
         .company-name{

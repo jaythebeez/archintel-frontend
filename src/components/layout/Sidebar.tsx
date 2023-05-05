@@ -26,7 +26,7 @@ const Sidebar = ({show}: Props) => {
                 <h3>{user.data?.firstname} {user.data?.lastname}</h3>
                 <p>{user.data?.type}</p>
               </div>
-              <div>
+              <div className='profile-arrow'>
                 <HiChevronDown fill='#fff' />
               </div>
             </div>

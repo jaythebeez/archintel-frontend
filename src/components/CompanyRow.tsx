@@ -15,11 +15,11 @@ const CompanyRow = ({company, refresh}: Props) => {
   return (
     <>
     <tr>
-        <th>{company.name}</th>
-        <th>{company.logo}</th>
-        <th>{company.status}</th>
-        <th><button className='material-button-blue' onClick={()=>setEditModal(true)}>Edit</button></th>
-        <th><button className='material-button-red' onClick={()=>setDeleteModal(true)}>Delete</button></th>
+        <td>{company.name}</td>
+        <td>{company.logo}</td>
+        <td>{company.status}</td>
+        <td><button className='material-button-blue' onClick={()=>setEditModal(true)}>Edit</button></td>
+        <td><button className='material-button-red' onClick={()=>setDeleteModal(true)}>Delete</button></td>
     </tr>
     {deleteModal && <DeleteCompanyDialog closeFunction={()=>setDeleteModal(false)} companyId={company.id} refresh={refresh} />}
     {editModal && <CompanyModal closeFunction={()=>setEditModal(false)} type='edit' company={company} refresh={refresh} />}
