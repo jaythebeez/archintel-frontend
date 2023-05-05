@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState: ArticleData [] = []
 
 export const articlesSlice = createSlice({
-    name: 'user',
+    name: 'articles',
     initialState,
     reducers: {
         addAllArticles: (state, action)=>{

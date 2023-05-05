@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import Modal from '../layout/Modal'
-import { EditorState, convertToRaw, convertFromHTML, convertFromRaw, ContentState} from "draft-js";
+import { EditorState, convertToRaw, ContentState} from "draft-js";
 import { Editor } from 'react-draft-wysiwyg';
 import draftToHtml from 'draftjs-to-html';
 import htmlToDraft from 'html-to-draftjs';

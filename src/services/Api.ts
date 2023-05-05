@@ -10,6 +10,8 @@ export default class Api {
     static getAllCompanies = "/company/getAll";
     static getCompanyById = (id: string) => `/company/get/${id}`;
     static addCompany = "/company/add";
+    static editCompany = (companyId: string) => `/company/edit/${companyId}`
+    static deleteCompany = (companyId: string) => `/company/delete/${companyId}`
 
     // article routes
     static getAllArticles = "/articles/getAll";

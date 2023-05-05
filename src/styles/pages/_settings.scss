@@ -20,5 +20,31 @@
                 color: $text-color-light;
             }
         }
+        .content-body{
+            h3{
+                padding: 15px 0;
+                font-size: 18px;
+                font-weight: 500;
+            }
+            border-top: $line-color;
+            margin-top: 15px;
+            padding-top:15px;
+            .table-wrapper{
+                width: 100%;
+                overflow: auto;
+                margin-top:15px;
+                table{
+                    min-width: 100%;
+                    th,td{
+                        font-size: 12px;
+                        padding: 5px;
+                    }
+                }
+                table, th, td {
+                    border: 1px solid black;
+                    border-collapse: collapse;
+                  }
+            }
+        }
     }
 }

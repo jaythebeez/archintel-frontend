@@ -41,7 +41,7 @@ const Dashboard = ({refresh}: Props) => {
 
             <div className="content">
                 <div className="content-header">
-                    <p className='headline'>Welcome to Walbro Writer Dashboard</p>
+                    <p className='headline'>Welcome to Walbro {user.data?.type} Dashboard</p>
                     <p className='tagline'>Data as of {dateString}</p>
                     {user.data?.type === "Writer" && <button className='material-button-green' onClick={()=>setCreateArticleModal(true)}>CREATE ARTICLE</button>}
                 </div>

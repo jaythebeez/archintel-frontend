@@ -25,6 +25,7 @@ declare global{
     }
 
     interface CompanyData {
+        id?: string
         logo: string,
         name: string,
         status: "Active" | "Inactive"
