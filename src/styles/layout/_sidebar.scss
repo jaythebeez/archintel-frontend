@@ -1,0 +1,104 @@
+.sidebar{
+    height:100%;
+    width: $sidebar-width;
+    background: $theme-color-green-dark;
+    position: fixed;
+    top:0;
+    left:-$sidebar-width;
+    z-index:1;
+    transition: .3s;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px 0px,
+                rgba(0, 0, 0, 0.14) 0px 4px 5px 0px,
+                rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;;
+
+    &.show{
+        left:0;
+    }
+
+    .sidebar-container{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .sidebar-top{
+            border-bottom: 0.5px solid #ffffff46;
+            background: $theme-color-green;
+            height: $sidebar-height;
+        }
+
+        .profile{
+            border-bottom: 0.5px solid $line-color;
+            padding: 10px 15px;
+            display: flex;
+            gap: 8px;
+            justify-content: space-around;
+            width: 100%;
+            background: $theme-color-green;
+            .profile-icon{
+                width: 40px;
+                height: 40px;
+                border-radius: 100%;
+                background: #ffffff44;
+            }
+            .profile-details{
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                h3{
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #fff;
+                    text-overflow: ellipsis;
+                    white-space: nowrap; 
+                    overflow: hidden;
+                    max-width: 130px;
+                }
+                p{
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .company-name{
+            border-bottom: 0.5px solid $line-color;
+            padding: 10px 15px;
+            background: $theme-color-green;
+
+            h3{
+                font-size: 20px;
+                font-weight: 500;
+                text-align: center;
+            }
+        }
+
+        .nav-links{
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .nav-link{
+                display: block;
+                width: 100%;
+                padding: 12px 10px;
+                border-radius: 5px;
+                transition: .3s;
+                &.active{
+                    background: $theme-color-green;
+                }
+                &:hover{
+                    cursor: pointer;
+                    background: $theme-color-green;
+                }
+            }
+        }
+
+        .sidebar-bottom{
+            margin-top: auto;
+            padding: 10px 15px;
+            background: $theme-color-green;
+            p{
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+    }
+}

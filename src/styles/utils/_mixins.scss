@@ -1,0 +1,34 @@
+@mixin transition($time) {
+	-webkit-transition: all $time ease-out 0s;
+	-moz-transition: all $time ease-out 0s;
+	-ms-transition: all $time ease-out 0s;
+	-o-transition: all $time ease-out 0s;
+	transition: all $time ease-out 0s;
+}
+
+@mixin transform($value) {
+  -webkit-transform: $value;
+      -ms-transform: $value;
+          transform: $value;
+}
+
+@mixin maxContainer(){
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+@mixin boxShadow(){
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
+}
+
+@mixin container(){
+    max-width: 1150px;
+    padding: 30px;
+    margin: 0 auto;
+    @media #{$small} {
+        padding: 20px;
+    }
+    @media #{$smaller} {
+        padding: 15px;
+    }
+}

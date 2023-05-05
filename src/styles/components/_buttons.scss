@@ -1,0 +1,23 @@
+$colors: (
+    green:#2e7d32,
+    blue: #006edc,
+    red: $theme-color-red
+);
+
+@each $key, $value in $colors {
+    .material-button-#{$key}{
+        text-transform: capitalize;
+        padding: 6px 16px;
+        background:$value;
+        color: #fff;
+        outline: none;
+        border: none;
+        border-radius:4px;
+        @include boxShadow();
+        transition: .3s;
+        &:hover{
+            background: lighten($color: $value, $amount: 10)
+        }
+    }
+}
+

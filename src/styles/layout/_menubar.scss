@@ -1,0 +1,73 @@
+.header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: $theme-color-green;
+    border-left: 0.5px solid #ffffff46;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, 
+                rgba(0, 0, 0, 0.14) 0px 4px 5px 0px,
+                rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;;
+    .header-container{
+        display: flex;
+        width: 100%;
+        .header-start{
+            width: 100%;
+            display: flex;
+            .menu-icon{
+                display: inline-flex;
+                padding: 12px;
+                transition: .3s;
+                cursor: pointer;
+                &:hover{
+                    background:lighten($theme-color-green, 5);
+                }
+            }
+
+            .search-container{
+                padding:5px;
+                height: 100%;
+                width: 100%;
+                position: relative;
+                .search-bar{
+                    border: none;
+                    outline: none;
+                    height: 100%;
+                    width: 100%;
+                    max-width: 540px;
+                    padding-left: 40px;
+                    border-radius: 5px;
+                    background: lighten($theme-color-green, 5);
+                    color: #fff;
+                }
+                .search-icon{
+                    position: absolute;
+                    left: 15px;
+                    top: 30%;
+                }
+            }
+        }
+        .header-end{
+            display: flex;
+            flex-shrink: 0;
+            padding-right: 10px;
+            .nav-icons{
+                align-items: center;
+                display: flex;
+                gap:5px;
+                .nav-icon{
+                    display: inline-flex;
+                    padding: 8px;
+                    border-radius: 50%;
+                    transition: .3s;
+                    cursor: pointer;
+                    &.active{
+                        background: #ffffff46;
+                    }
+                    &:hover{
+                        background: #ffffff46;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+.dashboard-container{
+    .content{
+        background: #fff;
+        @include boxShadow();
+        padding: 20px 15px;
+        border-radius: 5px;
+        min-height: 80vh;
+        .content-header{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-start;
+            .headline{
+                font-size: 20px;
+                font-weight: 500;
+            }
+            .tagline{
+                font-size: 14px;
+                font-weight: 300;
+                color: $text-color-light;
+            }
+        }
+        .content-nav{
+            display: flex;
+            margin-top: 30px;
+            gap: 15px;
+            width: 100%;
+            border-bottom: 1px solid rgba(82, 79, 79, 0.767);
+            .nav-item{
+                color: $text-color-light;
+                padding: 15px;
+                cursor: pointer;
+                &.active{
+                    color: $theme-color-blue;
+                    font-weight: 500;
+                    border-bottom: 3px solid $theme-color-blue;
+                }
+            }
+        }
+
+        .content-container{
+            padding: 15px 0;
+
+            .empty-image{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                flex-direction: column;
+                h3{
+                    color: $text-color;
+                }
+            }
+            .article-list{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                .article-list-item{
+                    padding: 15px;
+                    border: 1px solid #8680809a;
+                    border-radius: 5px;
+                    .title{
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+                    .detail{
+                        margin-left: 10px;
+                        word-wrap: break-word;
+                    }
+                    .button-container{
+                        display: flex;
+                        gap: 15px;
+                        margin-top: 15px;
+                        padding: 10px 0;
+                        border-top: 1px solid #8680809a;
+                    }
+                }
+            }
+        }
+    }
+}

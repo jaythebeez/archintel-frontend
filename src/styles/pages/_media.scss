@@ -1,0 +1,40 @@
+.media-container{
+    .content{
+        background: #fff;
+        @include boxShadow();
+        padding: 20px 15px;
+        border-radius: 5px;
+        min-height: 80vh;
+        .content-header{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-start;
+            .headline{
+                font-size: 20px;
+                font-weight: 500;
+            }
+            .tagline{
+                font-size: 14px;
+                font-weight: 300;
+                color: $text-color-light;
+            }
+        }
+
+        .content-table{
+            margin-top: 30px;
+            overflow: auto;
+            table{
+                min-width: 100%;
+                th,td{
+                    font-size: 12px;
+                    padding: 5px;
+                }
+            }
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+              }
+        }
+    }
+}

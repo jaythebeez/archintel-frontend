@@ -1,0 +1,37 @@
+// Variables
+$input-bg: #fafafa;
+$input-border: #ddd;
+$input-border-hover: #aaa;
+$input-text-color: #333;
+
+.form-control{
+  margin-bottom: 15px;
+}
+
+// Input Styles
+.form-label{
+    display: block;
+}
+
+.form-input {
+  background-color: $input-bg;
+  border: 1px solid $input-border;
+  border-radius: 4px;
+  color: $input-text-color;
+  display: block;
+  font-size: 16px;
+  height: 40px;
+  line-height: 1.5;
+  padding: 8px 12px;
+  transition: border-color 0.2s ease-in-out;
+  width: 100%;
+
+  &:focus {
+    border-color: $input-border-hover;
+    outline: none;
+  }
+
+  &::placeholder {
+    color: lighten($input-text-color, 50%);
+  }
+}

@@ -1,0 +1,35 @@
+/* autoprefixer grid: autoplace */
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900|Poppins:300,400,500,600,700,800,900&display=swap");
+
+// utils 
+@import "./utils/breakpoints";
+@import "./utils/colors";
+@import "./utils/variables";
+@import "./utils/mixins";
+
+// components
+@import "./components/inputs";
+@import "./components/buttons";
+
+// layout items
+@import "./layout/menubar";
+@import "./layout/app_container";
+@import "./layout/sidebar";
+@import "./layout/modal";
+
+// sections 
+@import "./sections/addArticleModal";
+
+// pages
+@import "./pages/auth";
+@import "./pages/dashboard";
+@import "./pages/media";
+@import "./pages/settings";
+
+*, *::after, *::before{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    color: #fff;
+}
