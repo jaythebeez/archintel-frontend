@@ -12,6 +12,7 @@ $modal-input-background: #1E1E1E;
     z-index: 100;
     color: #fff;
     overflow: scroll;
+    padding: 30px;
     .modal-container {
         width:100%;
         height:100%;
@@ -34,6 +35,7 @@ $modal-input-background: #1E1E1E;
                 text-align: center;
             }
             .modal-body{
+                padding: 15px 0;
                 .draft-wrapper{
                     padding:5px;
                     border-radius: 5px;

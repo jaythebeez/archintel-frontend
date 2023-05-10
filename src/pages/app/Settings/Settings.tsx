@@ -20,6 +20,7 @@ const Settings = ({refresh}: Props) => {
     try{
       const authService = new AuthService();
       await authService.logoutUser();
+      document.cookie = ""
       dispatch(removeUserFromState())
       toast("Logged out Successfully");
       await refresh();

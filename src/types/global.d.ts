@@ -9,6 +9,7 @@ declare global{
         email: string;
         type: 'Writer' | 'Editor';
         status: 'Active' | 'Inactive';
+        token: string
     }
 
     interface ArticleData {

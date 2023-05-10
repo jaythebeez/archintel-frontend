@@ -1,6 +1,7 @@
 import Api from "./Api";
 import ApiService from "./ApiService";
 import axios from "axios";
+import { AxiosError } from "axios";
 
 interface ArticleFormData {
     image: string;
@@ -16,11 +17,11 @@ export default class ArticleService extends ApiService{
         return new Promise(async(resolve, reject)=>{
             try{
                 const url = Api.addArticle("6450ffc5843f8e9732110bec");
-                const res = await axios.post(`${this.apiBase}${url}`, {...formData}, {withCredentials: true});
+                await axios.post(`${this.apiBase}${url}`, {...formData}, {withCredentials: true});
                 resolve(true)
-            } catch(e){
-                console.log(e)
-                reject(false)
+            } catch(e: unknown){
+                const error = e as AxiosError;
+                reject(error.message)
             }
         })
     }
@@ -29,11 +30,11 @@ export default class ArticleService extends ApiService{
         return new Promise(async(resolve, reject)=>{
             try{
                 const url = Api.editArticle(articleId);
-                const res = await axios.put(`${this.apiBase}${url}`, {...formData}, {withCredentials: true});
+                await axios.put(`${this.apiBase}${url}`, {...formData}, {withCredentials: true});
                 resolve(true)
             } catch(e){
-                console.log(e)
-                reject(false)
+                const error = e as AxiosError;
+                reject(error.message)
             }
         })
     }
@@ -42,11 +43,11 @@ export default class ArticleService extends ApiService{
         return new Promise(async(resolve, reject)=>{
             try{
                 const url = Api.deleteArticle(articleId);
-                const res = await axios.delete(`${this.apiBase}${url}`, {withCredentials: true});
+                await axios.delete(`${this.apiBase}${url}`, {withCredentials: true});
                 resolve(true)
             } catch(e){
-                console.log(e)
-                reject(false)
+                const error = e as AxiosError;
+                reject(error.message)
             }
         })
     }
@@ -55,11 +56,11 @@ export default class ArticleService extends ApiService{
         return new Promise(async(resolve, reject)=>{
             try{
                 const url = Api.publishArticle(articleId);
-                const res = await axios.put(`${this.apiBase}${url}`,{...formData}, {withCredentials: true});
+                await axios.put(`${this.apiBase}${url}`,{...formData}, {withCredentials: true});
                 resolve(true)
             } catch(e){
-                console.log(e)
-                reject(false)
+                const error = e as AxiosError;
+                reject(error.message)
             }
         })
     }
@@ -70,19 +71,10 @@ export default class ArticleService extends ApiService{
                 const res = await axios.get(`${this.apiBase}${Api.getAllArticles}`, {withCredentials: true});
                 return resolve(res.data)
             } catch(e){
-                console.log(e)
-                reject("Unable to get Articles")
+                const error = e as AxiosError;
+                reject(error.message)
             }
         })
     }
 
-    getArticleById = async (id: string) :Promise<ArticleData | Error> => {
-        try{
-            const url = Api.getArticleById(id)
-            const res = await axios.get(`${this.apiBase}${url}`, {withCredentials: true});
-            return res.data
-        } catch(e){
-            return new Error()
-        }
-    }
 }

@@ -25,7 +25,7 @@ export default class AuthService extends ApiService{
                 console.log(res)
                 resolve(res.data)
             } catch(e){
-                console.log(e)
+                console.log(e);
                 reject("Unable to Login User")
             }
         })

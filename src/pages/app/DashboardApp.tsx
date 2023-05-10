@@ -40,7 +40,7 @@ const DashboardApp = () =>{
 
     useEffect(()=>{
         if(!user.isAuthenticated) navigate("/login");
-    },[user])
+    },[user, navigate])
 
     useEffect(()=>{
         addArticlesToState();

@@ -15,14 +15,14 @@ const ArticleRow = ({article, refresh}: Props) => {
   return (
     <>
     <tr>
-        <th>{article.title}</th>
-        <th>{article.image}</th>
-        <th>{article.link}</th>
-        <th>{article.writer.firstname} {article.writer.lastname}</th>
-        <th>{article.editor?.firstname} {article.editor?.lastname}</th>
-        <th>{article.status}</th>
-        <th><button className='material-button-blue' onClick={()=>setEditModal(true)}>Edit</button></th>
-        <th><button className='material-button-red' onClick={()=>setDeleteModal(true)}>Delete</button></th>
+        <td>{article.title}</td>
+        <td>{article.image}</td>
+        <td>{article.link}</td>
+        <td>{article.writer.firstname} {article.writer.lastname}</td>
+        <td>{article.editor?.firstname} {article.editor?.lastname}</td>
+        <td>{article.status}</td>
+        <td><button className='material-button-blue' onClick={()=>setEditModal(true)}>Edit</button></td>
+        <td><button className='material-button-red' onClick={()=>setDeleteModal(true)}>Delete</button></td>
     </tr>
     {deleteModal && <DeleteArticleDialog closeFunction={()=>setDeleteModal(false)} articleId={article.id} refresh={refresh} />}
     {editModal && <ArticleModal closeFunction={()=>setEditModal(false)} type='edit' article={article} refresh={refresh} />}

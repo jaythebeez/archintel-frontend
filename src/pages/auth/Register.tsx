@@ -39,7 +39,7 @@ const Register = () => {
         event.preventDefault();
         // perform login logic
         const authService = new AuthService();
-        const user = await authService.registerUser({...formData})
+        const user = await authService.registerUser({...formData, email: formData.email.trim().toLocaleLowerCase()})
         if(user) navigate("/login");
       } catch(e){
         console.log(e)

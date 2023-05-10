@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { addUserToState } from "../../store/reducers/userReducer";
 import AuthService from "../../services/AuthService";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
+import { toast } from "react-toastify";
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -26,13 +27,18 @@ const Login = () => {
         event.preventDefault();
         // perform login logic
         const authService = new AuthService();
-        const user = await authService.loginUser({email, password})
+        const user = await authService.loginUser({email: email.trim().toLocaleLowerCase(), password})
+
+        const {token} = user;
+
+        document.cookie = `token=${token}; Path=/`
 
         // add user data to state
         dispatch(addUserToState(user));
 
         navigate("/");
       } catch(e){
+        toast.error("Unable to login, Please try again");
         console.log(e)
       }
     };
